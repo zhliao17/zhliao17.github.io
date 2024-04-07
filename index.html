@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/static/icon/icon.svg" type="image/x-icon">
+    <title>zhliao17 &#8211; resume</title>
+    <style>
+        /* Resume Typography */
+        html {
+            font-size: 100.01%
+        }
+
+        body {
+            background-color: #DEDEDE;
+            font: normal 0.75em/1.5 "Georgia", "Times New Roman", serif;
+        }
+
+        /*establish 12px font with verticle rhythm*/
+
+        /* =header font size */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #111;
+            font-family: "Tahoma", "Helvetica", "Droid Sans", sans-serif;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            border-bottom: 0.07142855em double #444;
+            color: #000;
+            font: normal 3.5em/2 "Georgia", sans-serif;
+            text-align: center;
+        }
+
+        h2 {
+            color: #000;
+            font-size: 1.5em;
+            letter-spacing: 0.07142855em;
+            font-variant: small-caps;
+        }
+
+        /* 24px / 16px */
+        h3 {
+            border-bottom: 0.07142855em solid #333;
+            font-size: 1.25em;
+            line-height: 1.42857em;
+            margin-bottom: 0.375em;
+            margin-top: 1.05357em;
+            position: relative;
+        }
+
+        /* 20px / 16px */
+        h4 {
+            font-size: 1.1255em;
+            line-height: 1.2857em;
+            margin-bottom: 0.375em;
+            margin-top: 1.0893em;
+        }
+
+        /* 18px / 16px */
+
+        /* =p leading */
+        p {
+            margin-bottom: 0.5em;
+            margin-top: 1em;
+        }
+
+        p+p {
+            margin-top: 1.5em;
+        }
+
+        p+ul {
+            margin-top: 0.75em;
+        }
+
+        footer p,
+        footer p+p {
+            margin: 0;
+        }
+
+        /* Layout for Resume */
+        /* =header display */
+        header,
+        footer {
+            clear: both;
+        }
+
+        header h2,
+        header p {
+            padding: 0 40px;
+            width: 510px;
+        }
+
+        header h1 {
+            text-shadow: 2px 3px 2px #999;
+        }
+
+        /* page holder */
+        .page {
+            background: #fff;
+            border: 0.07142855em solid #CECECE;
+            margin: 0.35714286em auto 1em;
+            padding-bottom: 1.5em;
+            position: relative;
+            width: 960px;
+        }
+
+        /*h3 {display: inline-block; margin-top: 0; padding-top: 0;}*/
+        .time {
+            font-size: 0.75em;
+            font-weight: normal;
+            float: right;
+            margin-top: 0;
+            padding-top: 0;
+            position: absolute;
+            right: 0;
+        }
+
+        /* 16 / 20 */
+
+        /* =ul style */
+        ul {
+            margin: 0 2em 0.857em;
+        }
+
+        ul li {
+            list-style-type: square;
+            position: relative;
+        }
+
+        .technology li {}
+
+        .technology li>span {
+            display: none;
+        }
+
+
+        /* =a styles */
+        a:link,
+        a:active,
+        a:focus,
+        a:visited,
+        a:hover {
+            color: #444;
+            text-decoration: none;
+        }
+
+        @media screen and (min-width: 320px) {
+
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+                text-shadow: none;
+            }
+
+            header,
+            header h2,
+            header p,
+            .page,
+            footer {
+                background: #fff;
+                margin: 0 auto;
+                padding: 0;
+                width: 93.75%;
+            }
+
+            header {
+                margin-bottom: 1em;
+            }
+
+            header h2,
+            header p {
+                margin-left: 0;
+                padding-left: 0;
+            }
+
+            .page .resume_content,
+            .page .resume_skills {
+                float: none;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+            }
+
+            article,
+            aside,
+            .vcard {
+                margin: 0 10px;
+                padding: 0;
+            }
+
+            footer {
+                font-size: inherit !important;
+            }
+
+
+            footer {
+                margin-bottom: 1em;
+            }
+
+            .vcard {
+                border: none;
+                background-color: #fff;
+                display: none;
+                margin: 1em 10px 1em -3px !important;
+                position: inherit;
+                width: 100%;
+            }
+
+            .vcard p {
+                padding: 0 10px 0 0;
+            }
+
+            .vcard h3 {
+                display: block;
+            }
+
+            .vcard strong {
+                display: inline-block;
+            }
+        }
+
+        @media screen and (min-width: 767px) {
+
+            html,
+            body,
+            .page {
+                border: none !important;
+                color: #444 !important;
+                text-shadow: none !important;
+                filter: none !important;
+                margin: 0;
+                padding: 0;
+                -ms-filter: none !important;
+            }
+
+            body {
+                background-color: rgb(110, 110, 110) !important;
+            }
+
+            /* page holder */
+            .page {
+                background: #fff;
+                margin: 0.35714286em auto 1em;
+                position: relative;
+                width: 93.75%;
+            }
+
+            /* 960px / 1024px */
+            /* 2 columm layout */
+            /* column 1: article */
+            .page .resume_content {
+                float: left;
+                margin-bottom: 0.35714286em;
+                margin-top: 1em;
+                width: 590px;
+            }
+
+            /* column 2: aside */
+            .page .resume_skills {
+                float: right;
+                margin-top: 1em;
+                width: 365px;
+            }
+
+            /* layout padding*/
+            article {
+                margin: 0 20px 0 40px;
+                position: relative;
+            }
+
+            aside {
+                margin: 0 40px 0 20px;
+                position: relative;
+            }
+
+            aside h2 {
+                margin-bottom: 1.05357em;
+            }
+
+
+            /* 2 columm layout */
+            /* column 1: */
+            .page .resume_content {
+                float: left;
+                margin-bottom: 0.35714286em;
+                width: 61.45833%;
+            }
+
+            /* 590px / 960px */
+            /* column 2: */
+            .page .resume_skills {
+                float: right;
+                width: 34.375%;
+            }
+
+            /* 270px / 960px */
+            header p {
+                width: 57.291667%
+            }
+
+            /* =footer placement */
+            .vcard {
+                background-color: #EAEAEA;
+                border: 1px solid #DEDEDE;
+                box-shadow: 2px 3px 6px #999;
+                left: 66.145833%;
+                margin: 10px;
+                padding: 6px 10px;
+                position: absolute;
+                width: 26.666667%;
+                top: 9.0625em;
+            }
+
+            /* 635px / 960px, 256px / 960px */
+            .vcard h3,
+            .vcard strong {
+                display: none;
+            }
+
+            b {
+                font-weight: normal;
+                margin-top: -2px;
+                padding-top: 0;
+                position: absolute;
+                right: 0;
+            }
+
+            h3+p {
+                max-width: 75%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+
+        @media print {
+
+            @page {
+                margin: 0.5cm;
+            }
+
+            body {
+                font: 12pt Georgia, "Times New Roman", Times, serif;
+                line-height: 1.3;
+            }
+
+            .page,
+            .page .resume_content,
+            .page .resume_skills,
+            article,
+            aside,
+            header h2,
+            header p {
+                background-image: none;
+                border: none;
+                float: none !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                text-indent: inherit !important;
+                width: auto !important;
+            }
+
+            .vcard {
+                border: none;
+                background-color: #fff;
+                margin-left: 0;
+                margin-top: 0;
+                padding-left: 0;
+                position: inherit !important;
+                width: 100%;
+            }
+
+            .vcard h3,
+            .vcard strong {
+                display: inline-block;
+            }
+
+            header h1 {
+                font-size: 30pt;
+            }
+
+            h1 {
+                font-size: 24pt;
+            }
+
+            h2 {
+                font-size: 14pt;
+                margin-top: 25px;
+            }
+
+            a,
+            a:visited {
+                color: #444 !important;
+                text-decoration: underline;
+            }
+
+            abbr[title]:after {
+                content: " (" attr(title) ")";
+            }
+
+            p a[href^="http://"]:after {
+                content: " (" attr(href) ")";
+                font-size: 90%;
+            }
+
+        }
+
+        /* Jp_$NL_hwP3rm!t_@l */
+    </style>
+</head>
+
+<body>
+    <main role="main">
+        <div class="page">
+            <!-- 1. Header -->
+            <header>
+                <h1>Ethan Ziheng LIAO</h1>
+                <h2>Product Designer</h2> <br />
+                <p>
+                    Product designer dedicated to creating immersive experiences that blend functionality with
+                    aesthetics. Responsible for designing the architecture and modules of software products based on
+                    requirements analysis and design documents. Writes demo program code, tests the rationality and
+                    effectiveness of UI and UX, and conducts unit and integration testing to ensure software quality.
+                    Participates in software deployment and maintenance, resolving issues encountered during software
+                    use. Collaborates with project managers, developers, testers, and other team members to ensure the
+                    smooth completion of software projects. Possesses excellent logical thinking and problem-solving
+                    skills to quickly understand complex requirements and design solutions. Demonstrates strong learning
+                    and adaptability, continuously updating knowledge and skills to meet evolving technological and
+                    market demands. Strategically minded, focuses on optimizing processes to deliver solutions that meet
+                    client requirements, are scalable, and sustainable.
+                </p>
+            </header>
+
+            <!-- 2a. Resume Content -->
+            <section class="resume_content">
+                <article>
+                    <h2>PROJECTS</h2>
+                    <section>
+                        <h3>Product Designer <span class="time">
+                                <time datetime="2023-01-01" class="start">2023</time> &#8211; 2024</span></h3>
+                        <p><!-- 业务线条 -->
+                            Cloudbae Big Data Industry Development Co., Ltd. &#8211; City Platform Department &#8211;
+                            <strong>NNRT Business Group</strong>
+                            <b>Nanning, Guangxi</b>
+                        </p>
+                        <ul>
+                            <li>Responsible for the product design and project management of the rail transit app and
+                                mini-program. Overseeing UI & UX design and overall product strategy until project
+                                implementation.</li>
+                            <li>
+                                Responsible for the product design of the Nanning Rail Transit Cloudbae in
+                                collaboration with Baosight Software Co.,Ltd. (Guangxi), focusing on the development of
+                                the Rail Transit -
+                                Metro Smart BOM - Ticketing System.</li>
+
+                        </ul>
+                        <p><!-- 业务线条 -->
+                            Cloudbae Big Data Industry Development Co., Ltd. &#8211; City Platform Department &#8211;
+                            <strong>Big Data Business Group</strong>
+                            <b>Nanning, Guangxi</b>
+                        </p>
+                        <ul>
+                            <li>Responsible for iterating on the company's Data Middle Platform product and supporting
+                                the AiGe Workshop enterprise Data Middle Platform construction project. Assisting
+                                traditional enterprises in their digital transformation journey to optimize operations
+                                through data-driven strategies.</li>
+                        </ul>
+                    </section>
+
+                    <p><!-- 业务线条 -->
+                        Cloudbae Big Data Industry Development Co., Ltd. &#8211; City Platform Department &#8211;
+                        <strong>Smart City Business Group</strong>
+                        <b>Nanning, Guangxi</b>
+                    </p>
+                    <ul>
+                        <li>Responsible for the technical implementation of Alipay's online payment system for the
+                            "iNanning APP" government consumer vouchers program. Supporting various scenes such as
+                            department
+                            stores, supermarkets, entertainment venues, scenic spots, restaurants, and hotels in Nanning
+                            to distribute government consumer vouchers, aiming to stimulate the local economy with over
+                            20 million RMB in consumption.</li>
+                        <li>Responsible for the design and development of the management backend for the Smart City
+                            platform, including projects like "iNanning APP", aiming to achieve cost reduction and
+                            efficiency improvement in mid-to-back-office operations.</li>
+                        <li>Responsible for the product planning of the "iNanning APP" Message Platform 2.0
+                            reconstruction, enabling support for SMS and client-side PUSH notifications, aiming to
+                            achieve cost reduction and efficiency improvement.</li>
+                        <li>Responsible for the design and development of the identity QR code payment scene for the
+                            "Nanning One Code Smart PASS" project, collaborating with the Alipay "Shi-Min-Ma" team to
+                            enable
+                            Alipay scanning for payment transactions using the Nanning identity code.</li>
+                    </ul>
+
+                    <section>
+                        <h3>Interaction Designer <span class="time">
+                                <time datetime="2021-01-01" class="start">2021</time> &#8211;
+                                <time datetime="2022-12-31" class="end">2022</time>
+                            </span></h3>
+                        <p><!-- 业务线条 -->
+                            Cloudbae Big Data Industry Development Co., Ltd. &#8211; Product Department &#8211;
+                            <strong>Smart City Business Group</strong>
+                            <b>Nanning, Guangxi</b>
+                        </p>
+                        <ul>
+                            <li>Responsible for integrating the Alipay Nanning Metro Ride Code product, part of the
+                                Alipay Nanning Metro Ride Code project, and launching the Nanning Metro Ride Code scene
+                                on Alipay.</li>
+                            <li>Responsible for the development and implementation of the "iNanning APP: Data Middle-End
+                                Platform, including the Data BI system, and ensuring the project is successfully
+                                deployed. Internship involvement in efficient data visualization for the "iNanning"
+                                Project.</li>
+                            <li>Responsible for the online vaccine appointment service project for Nanning City,
+                                supporting the implementation of the vaccine appointment functionality on the Love
+                                Nanning mobile app and Alipay mini-program. Facilitating Nanning City in completing the
+                                second dose vaccination task.
+                            </li>
+                            <li>Responsible for the product prototype design of the e-Keqiao project in Zhejiang's
+                                Keqiao District and creating a demonstration mini-program for e-Keqiao.</li>
+                        </ul>
+                        <p><!-- 业务线条 -->
+                            Cloudbae Big Data Industry Development Co., Ltd. &#8211; Product Department &#8211;
+                            <strong>Big Data Business Group</strong>
+                            <b>Nanning, Guangxi</b>
+                        </p>
+                        <ul>
+                            <li>Responsible for the development of the company's Data Open Platform, facilitating the
+                                exchange of data assets and enabling data monetization. Implementing data assetization
+                                and providing services such as bank provident fund inquiries through data services.</li>
+                        </ul>
+                        <p><!-- 业务线条 -->
+                            Cloudbae Big Data Industry Development Co., Ltd. &#8211; Product Department &#8211;
+                            <strong>Main Business Lines</strong>
+                            <b>Nanning, Guangxi</b>
+                        </p>
+                        <ul>
+                            <li><time datetime="2022-06-30"></time>Responsible for the design and development of the
+                                official website for CloudBae Big Data Company, completing the construction of version
+                                2.0 of the website. Additionally, expanding the company's business outreach channels
+                                through the operation of a business email.
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>INTERNS</h2>
+
+                        <h3>Product Manager Assistant <span class="time"><time datetime="2020-06-01">2020
+                                    Summer</time></span></h3>
+                        <p><strong><!-- http://www.cloudbae.cn/ -->Cloudbae Big Data Industry Development Co., Ltd.
+                                &#8211; Sowfware Development, Project, Product Design, Operation, etc</strong>
+                            <b>Nanning, Guangxi</b>
+                        </p>
+                    </section>
+                </article>
+
+            </section>
+
+            <!-- 2b. Resume Technical Knowledge/Skills -->
+            <div class="resume_skills">
+                <aside>
+                    <section>
+                        <h2>SHOW REELS</h2>
+                        <ul>
+                            <li><a href="https://zhliao17.xyz" target="_blank">zhliao17 Page</a></li>
+                            <li><a href="https://cloudbae.cn" target="_blank">Cloudbae Official Website</a></li>
+                            <li><a href="https://datacl.cloudbae.cn:38014/cdas-main-front/" target="_blank">Data
+                                    Platform</a></li>
+                            <li><a href="https://msg-platform.cloudbae.cn:8419/console/msg-platform-manager-web/login"
+                                    target="_blank">Message Platform</a></li>
+                            <li><a href="https://lanhuapp.com/link/#/invite?sid=qx0TBjQs" target="_blank">NNRT APP</a>
+                            </li>
+                            <!-- 密码: FCm1 -->
+
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>STACKS</h2>
+                        <ul class="technology">
+                            <li>Product Design &#8211; MasterGO, Axure<span class="exp">4 years</span></li>
+                            <li>Data Analysis &#8211; Python, MySQL, SuperSet, SPSS <span class="exp">4 years</span>
+                            </li>
+
+                            <li>Design related &#8211; Adobe Ps, Ai, Pr, Davinci<span class="exp">9 years</span></li>
+                            <li>3D Design(DCC)related &#8211; Blender, UE5<span class="exp">6 years</span></li>
+                            <li>Web Develop related &#8211; HTML, CSS, Js<span class="exp">3 year</span></li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>QUALIFICATIONS</h2>
+                        <ul class="technology">
+                            <li>Project Manager &#8211; Intermediate Professional Title<span class="exp">1 years</span>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>EDUCATIONS</h2>
+
+                        <h3>The Hong Kong Polytechnic University<span class="time"><time
+                                    datetime="2020-09-30">09/2020</time></span></h3>
+                        <p>
+                            MSC in Knowledge and Technology Management (with a focus on Engineering Projects)<br />
+
+                            Specializing in knowledge management, innovation, data science, and workflow optimization.
+                            <b>Kowloon, HongKong</b>
+                        </p>
+
+                        <h3>Guangxi University <span class="time"><time datetime="2018-06-30">06/2018</time></span></h3>
+                        <p>
+                            Bachelor of Science in Business Administration (with a focus on Engineering Projects)<br />
+                            Specializing in engineering analysis, data analysis, and supply chain management.
+                            <b>Nanning, Guangxi</b>
+                        </p>
+                    </section>
+                </aside>
+            </div>
+
+            <!-- 3. Contact Information -->
+            <footer>
+                <div id="hcard-zhliao17" class="vcard">
+                    <h3>Contact Me</h3>
+                    <p class="adr"><strong>Base: </strong> <a
+                            href="https://ditu.amap.com/search?id=B0FFFEFKQM&city=450108&geoobj=108.372874%7C22.763572%7C108.382888%7C22.769699&query_type=IDQ&query=%E4%BA%94%E8%B1%A1%E6%80%BB%E9%83%A8%E5%A4%A7%E5%8E%A6&zoom=17.5"
+                            title="View on Amap" rel="me"><span class="locality">Wuxiang Headquarters Base, Nanning, Guangxi</span></a></p>
+                    <p class="tel"><strong><span class="type">Phone: </span>:</strong> <a
+                            href="callto: +86 189-7898-7817" rel="me">+86 18978987817</a></p>
+                    <p class="email"><strong>Email: </strong> <a href="ethan@zhliao17.tech" title="Email Ethan"
+                            rel="me">ethan@zhliao17.tech</a></p>
+                    <!-- <p class="page"><strong>Page: </strong> <a href="https://zhliao17.xyz" title="Home Page"
+                            rel="me">zhliao17.xyz</a></p> -->
+                </div>
+            </footer>
+        </div>
+    </main>
+</body>
+
+</html>
